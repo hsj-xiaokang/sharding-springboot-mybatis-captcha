@@ -15,4 +15,10 @@ sharding-springboot-mybatis
 
 包含inline配置算法和自定义class方式算法demo。
 
+项目启动后，captcha访问：http://localhost:7777/imageValidate.html 体验即可
+
 作者：2356899074@qq.com
+
+博客：https://blog.csdn.net/HSJ0170/article/details/107958950
+
+![avatar](https://img-blog.csdnimg.cn/20200812160326207.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hTSjAxNzA=,size_16,color_FFFFFF,t_70#pic_center)
