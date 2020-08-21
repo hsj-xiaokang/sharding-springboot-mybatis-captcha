@@ -1,0 +1,30 @@
+server:
+  port: 7777
+spring: 
+  servlet:
+    multipart:
+     max-file-size: 200MB
+     max-request-size: 200MB
+  profiles: 
+    active: table  #引入另外一个同路径下yml配置文件，该配置文件必须以application-开头
+  redis:
+    host: 127.0.0.1
+  # port: 6379
+    port: 6739
+    timeout: 20000
+  # password: HSJissmart1
+    password: xfxMaster973339_2018
+    pool:
+      max-active: 8
+      min-idle: 0
+      max-idle: 8
+      max-wait: -1
+# datasource:
+  # username: root
+  # password: HSJissmart1
+  # url: jdbc:mysql://localhost:3307/test_order?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+  # driver-class-name: com.mysql.jdbc.Driver 
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.example.shatding_springboot_mybatis_generator.entity
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>图片验证</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/fontawesome/css/all.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="/fontawesome/css/public.css"/> -->
+    <link rel="stylesheet" type="text/css" href="imageValidate.css" />
+</head>
+<body>
+    <div id="container-capture-bd">
+        <div class="imageDiv-capture-bd">
+            <img id="validateImage-capture-bd" src=""/>
+            <img id="slideImage-capture-bd" src=""/>
+        </div>
+        <div class="resultDiv-capture-bd">   
+            <button class="btn btn-default" onclick="exchange();"><i class="fas fa-redo"></i>&nbsp;</button>         
+            <span id="operateResult-capture-bd"></span>
+        </div>
+        <div>
+            <div id="sliderOuter-capture-bd" class="outer-capture-bd">
+                <div id="dragDiv-capture-bd">拖动滑块完成拼图</div>
+                <div id="sliderInner-capture-bd" class="inner-capture-bd">
+                     <i class="fas fa-angle-double-right"></i> 
+                     <div class="coverIcon-capture-bd"></div> 
+                </div>
+            </div>
+        </div>
+       <!--  <div class="op-capture-bd"> -->
+        <!-- <button class="btn btn-success" onclick="exchange();"><i class="fas fa-redo"></i>&nbsp;换一组</button> -->
+        <!-- </div> -->
+    </div>
+
+</body>
+
+<script type="text/javascript" src="jquery-3.4.0.min.js" ></script>
+<script type="text/javascript" src="Tdrag.js"></script>
+<script type="text/javascript" src="imageValidate.js" ></script>
+</html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.shatding_springboot_mybatis_generator.mapper.UserMapper">
+	<resultMap id="BaseResultMap" type="com.example.shatding_springboot_mybatis_generator.entity.User" >
+	<id column="id" property="id"  />
+	<result column="name"  property="name" />
+	<result column="city_id" property="cityId" />
+	<result column="sex"  property="sex" />
+	<result column="phone" property="phone" />
+	<result column="email"  property="email" />
+	<result column="create_time" property="createTime" />
+	<result column="password" property="password" />
+	<result column="add_id" property="addId" />
+	</resultMap>
+	
+    <insert id="save" parameterType="User">
+        INSERT INTO t_user(id,name,phone,email,city_id,sex,password,add_id)
+        VALUES
+        (
+        #{id},#{name},#{phone},#{email},#{cityId},#{sex},#{password},#{addId}
+        )
+    </insert>
+    
+    <select id="get" parameterType="long" resultType="User">
+    	select * from t_user where id = #{id}
+    </select>
+    
+        
+    <select id="getAll" resultMap="BaseResultMap">
+    	select * from t_user 
+    </select>
+    
+    <select id="getAllByPage" parameterType="int" resultMap="BaseResultMap">
+    	select * from t_user limit #{page},#{size}
+    </select>
+    
+    <select id="getAllJoin" resultType="map">
+    	select * from t_user u inner join t_address ad on (u.add_id = ad.id)
+    </select>
+    
+    <select id="getAllCount" resultType="long">
+    	select count(*) from t_user 
+    </select>
+</mapper>
